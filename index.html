@@ -673,8 +673,8 @@ a.fa.fa-angle-down:hover{
             </style>
     
           <li class="badge badge-primary">Algorithms</li>
-          <li class="badge badge-primary">Machine Learning</li>
-          <li class="badge badge-primary">Deep Learning - CNNs, NLP, Transformerss</li>
+          <li class="badge badge-primary">MLOps</li>
+          <li class="badge badge-primary">Neural Architecture - CNNs, LLM, Transformerss</li>
           <li class="badge badge-primary">Quantum Computing</li>
           <li class="badge badge-primary">Data Analysis</li>
           <li class="badge badge-primary">Containerization </li>
@@ -912,7 +912,6 @@ transition: transform 0.3s;
 </a>
 
 
-
 </section>
 
 
@@ -922,6 +921,313 @@ transition: transform 0.3s;
 <section></section>
 <div style="height: 60px;"></div> <!-- Spacer -->
 <section></section>
+
+
+
+
+<section id="timepass" class="container my-5">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    #timepass body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+      transition: all 0.4s;
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    #timepass .clock {
+      position: relative;
+      display: flex;
+      flex-flow: column wrap;
+      width: 280px;
+      height: 100px;
+    }
+
+    #timepass .block {
+      width: calc(100% / 12);
+      height: 20%;
+      color: #3d3d3d;
+      transition: 0.4s;
+    }
+
+    #timepass .block:not(:nth-child(n + 16)):nth-child(n + 11),
+    #timepass .block:not(:nth-child(n + 46)):nth-child(n + 41) {
+      margin-right: 10px;
+    }
+
+    #timepass .block:not(:nth-child(n + 31)):nth-child(n + 26) {
+      margin-right: 20px;
+    }
+
+    #timepass .block::before {
+      content: attr(data-num);
+      position: relative;
+      display: block;
+      font-size: 16px;
+      width: 100%;
+      height: 100%;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    #timepass .block:nth-child(-n + 10)::before {
+      content: '0' attr(data-num);
+    }
+
+    #timepass .block.active::before {
+      color: whitesmoke;
+      font-weight: 500;
+    }
+
+    #timepass .block.second::before {
+      color: #ff0000;
+    }
+
+    #timepass .divider {
+      position: absolute;
+      width: 2px;
+      background-color: whitesmoke;
+      height: 60%;
+      top: 20%;
+      left: calc(50% + 19px);
+    }
+
+    #timepass .light-theme {
+      background: #e8e8e8;
+    }
+
+    #timepass .light-theme .block {
+      color: #a8a8a8;
+    }
+
+    #timepass .light-theme .block.active::before {
+      color: #333;
+    }
+
+    #timepass .light-theme .block.second {
+      background: #f0f0f0;
+    }
+
+    #timepass .light-theme .block.second::before {
+      color: #333;
+    }
+
+    #timepass .light-theme .divider {
+      background: #333;
+    }
+
+    #timepass .switch-theme {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      color: grey;
+      display: flex;
+      align-items: center;
+    }
+
+    #timepass .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      margin-left: 30px;
+    }
+
+    #timepass .switch input {
+      display: none;
+    }
+
+    #timepass .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    #timepass .slider::before {
+      position: absolute;
+      content: '';
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    #timepass input:checked + .slider {
+      background-color: #333;
+    }
+
+    #timepass input:checked + .slider::before {
+      transform: translateX(26px);
+    }
+  </style>
+
+  <div class="clock">
+      <div class="block" data-num="0"></div>
+      <div class="block" data-num="1"></div>
+      <div class="block" data-num="2"></div>
+      <div class="block" data-num="3"></div>
+      <div class="block" data-num="4"></div>
+      <div class="block" data-num="5"></div>
+      <div class="block" data-num="6"></div>
+      <div class="block" data-num="7"></div>
+      <div class="block" data-num="8"></div>
+      <div class="block" data-num="9"></div>
+      <div class="block" data-num="10"></div>
+      <div class="block" data-num="11"></div>
+      <div class="block" data-num="12"></div>
+      <div class="block" data-num="13"></div>
+      <div class="block" data-num="14"></div>
+      <div class="block" data-num="15"></div>
+      <div class="block" data-num="16"></div>
+      <div class="block" data-num="17"></div>
+      <div class="block" data-num="18"></div>
+      <div class="block" data-num="19"></div>
+      <div class="block" data-num="20"></div>
+      <div class="block" data-num="21"></div>
+      <div class="block" data-num="22"></div>
+      <div class="block" data-num="23"></div>
+      <div class="block" data-num="24"></div>
+      <div class="block" data-num="25"></div>
+      <div class="block" data-num="26"></div>
+      <div class="block" data-num="27"></div>
+      <div class="block" data-num="28"></div>
+      <div class="block" data-num="29"></div>
+      <div class="block" data-num="30"></div>
+      <div class="block" data-num="31"></div>
+      <div class="block" data-num="32"></div>
+      <div class="block" data-num="33"></div>
+      <div class="block" data-num="34"></div>
+      <div class="block" data-num="35"></div>
+      <div class="block" data-num="36"></div>
+      <div class="block" data-num="37"></div>
+      <div class="block" data-num="38"></div>
+      <div class="block" data-num="39"></div>
+      <div class="block" data-num="40"></div>
+      <div class="block" data-num="41"></div>
+      <div class="block" data-num="42"></div>
+      <div class="block" data-num="43"></div>
+      <div class="block" data-num="44"></div>
+      <div class="block" data-num="45"></div>
+      <div class="block" data-num="46"></div>
+      <div class="block" data-num="47"></div>
+      <div class="block" data-num="48"></div>
+      <div class="block" data-num="49"></div>
+      <div class="block" data-num="50"></div>
+      <div class="block" data-num="51"></div>
+      <div class="block" data-num="52"></div>
+      <div class="block" data-num="53"></div>
+      <div class="block" data-num="54"></div>
+      <div class="block" data-num="55"></div>
+      <div class="block" data-num="56"></div>
+      <div class="block" data-num="57"></div>
+      <div class="block" data-num="58"></div>
+      <div class="block" data-num="59"></div>
+      <div class="divider"></div>
+  </div>
+
+
+  <script>
+      const numbers = [
+          [1,1,1,1,1,1,0,0,0,1,1,1,1,1,1], // 0
+          [1,0,0,0,1,1,1,1,1,1,0,0,0,0,1], // 1
+          [1,0,1,1,1,1,0,1,0,1,1,1,1,0,1], // 2
+          [1,0,1,0,1,1,0,1,0,1,1,1,1,1,1], // 3
+          [1,1,1,0,0,0,0,1,0,0,1,1,1,1,1], // 4
+          [1,1,1,0,1,1,0,1,0,1,1,0,1,1,1], // 5
+          [1,1,1,1,1,1,0,1,0,1,1,0,1,1,1], // 6
+          [1,0,0,0,0,1,0,1,1,1,1,1,0,0,0], // 7
+          [1,1,1,1,1,1,0,1,0,1,1,1,1,1,1], // 8
+          [1,1,1,0,1,1,0,1,0,1,1,1,1,1,1]  // 9
+      ];
+
+      const blocks = [];
+      const digits = Array.from(document.querySelectorAll('.block'));
+
+      for(let i = 0; i < 4; i++) {
+          blocks.push(digits.slice(i * 15, i * 15 + 15));
+      }
+
+      const setNum = (block, num) => {
+          let n = numbers[num];
+          for(let i = 0; i < block.length; i++) {
+              block[i].classList[n[i] === 1 ? 'add' : 'remove']('active');
+          }
+      };
+
+      const time = {
+          s: '',
+          m: '',
+          h: '',
+          p: null
+      };
+
+      const animator = () => {
+          let d = new Date(),
+              h = d.getHours().toString(),
+              m = d.getMinutes().toString(),
+              s = d.getSeconds().toString();
+          
+          s = s.length === 1 ? '0' + s : s;
+          m = m.length === 1 ? '0' + m : m;
+          h = h.length === 1 ? '0' + h : h;
+          
+          if(s !== time.s) {
+              for(let i = 0; i < digits.length; i++) {
+                  let d = digits[i];
+                  if(i === +s) {
+                      d.classList.add('second');
+                      if(time.p !== null) digits[time.p].classList.remove('second');
+                      time.p = i;
+                      time.s = s;
+                  }
+              }
+          }
+          
+          if(m !== time.m) {
+              setNum(blocks[2], m[0]);
+              setNum(blocks[3], m[1]);
+              time.m = m;
+          }
+          
+          if(h !== time.h) {
+              setNum(blocks[0], h[0]);
+              setNum(blocks[1], h[1]);
+              time.h = h;
+          }
+          window.requestAnimationFrame(animator);
+      };
+
+      window.requestAnimationFrame(animator);
+
+      function changeTheme(ev) {
+          document.body.classList.toggle('light-theme');
+      }
+  </script>
+</section>
+
+
+
+
+
+<section></section>
+<div style="height: 60px;"></div> <!-- Spacer -->
+<section></section>
+
 
 
 
@@ -1380,53 +1686,6 @@ _____________________________    ____________________________    _______________
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </section>
-<section id ="djimmi" class ="container my-5">
-  <body>
-      <style>
-  
-  #djimmi strong {
-              color:  rgb(255, 75, 75);
-                
-              
-              line-height: 100%;
-          }
-  
-      </style>
-      <h1>Publications</h1>
-      
-      <ul>
-          
-              <strong>World of Blis:</strong> An Open-Domain Platform for Web-Based Agents ICML 2017<br>
-              Tianlin (Tim) Shi, Andrej Karpathy, Linxi (Jim) Fan, Jonathan Hernandez, Percy Liang
-         
-  <br>
-        
-              <strong>PixelCNN++:</strong> A PixelCNN Implementation with Discretized Logistic Mixture Likelihood and Other Modifications ICLR 2017<br>
-              Tim Salimans, Andrej Karpathy, Xi Chen, Diederik P. Kingma, and Yaroslav Bulatov
-         
- <br> 
-        
-              <strong>Connecting Images and Natural Language (PhD thesis)</strong> 2016<br>
-              Andrej Karpathy
-          
-  <br>
-          
-              <strong>DenseCap:</strong> Fully Convolutional Localization Networks for Dense Captioning CVPR 2016 (Oral)<br>
-              Justin Johnson*, Andrej Karpathy*, Li Fei-Fei
-          
-  <br>
-          
-              <strong>Visualizing and Understanding Recurrent Networks</strong> ICLR 2016 Workshop<br>
-              Andrej Karpathy*, Justin Johnson*, Li Fei-Fei
-         
-  
-          
-      </ul>
-  </body>
-  </section>
-  
-<br>
-<br>
 
 
 
@@ -1435,7 +1694,7 @@ _____________________________    ____________________________    _______________
         <style>
    
     #vanilla strong {
-                color: rgb(255, 75, 75);
+                color: rgb(202, 61, 61);
                 
                 line-height: 100%;
             }
@@ -1455,73 +1714,45 @@ _____________________________    ____________________________    _______________
                 <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
                 <a href="lander.html">Documentation</a><br>
            
-                
+                <strong>Large Language model project</strong> building a llm for performing task for a ! user<var> - LLM architecture</var><br>
+              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="lander.html">Documentation</a><br>
            
               <strong>D-16 Building Transformer </strong> Building a transformer from scratch using c++ also built using Pytorch<var> - neural network architecture</var><br>
-                <a href="https://github.com/your-username" >GitHub</a>
-                <a href="lander.html"target = "blank" class ="btn"></a><br>
+              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a href="lander.html">Documentation</a><br>
                 
            
-    
-           
-              <strong>Sonar Binary Classification</strong> Based on the given data by the sonar , predict the class of the object i,e rock or mine<var> - Machine learning</var><br>
-              <a href="https://github.com/your-username" >GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
             
-    
+              <strong>heart diesease prediction</strong> using genetic algorithm for feature selection of multiple models<var> - Machine learning / MLOps</var><br>
+              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="lander.html">Documentation</a><br>
             
-              <strong>Poisonous Mushroom Binary Classification</strong> given properties of the mushroom to classify if the mushroom is poisonous<var> - Machine Learning</var><br>
-              <a href="https://github.com/your-username" >GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
-           
-    
-            
-              <strong>Gold Price Prediction</strong> price prediction of gold using eneamble method , random forrest regression<var> - Machine learning</var><br>
-              <a href="https://github.com/your-username" >GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
-            
-            
-              <strong>heart diesease prediction</strong> using genetic algorithm for feature selection of multiple models<var> - Machine learning</var><br>
-              <a href="https://github.com/your-username">GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
-            
-    
-           
-              <strong>Conways game of life </strong> simulatiton<var> - Algorithm</var><br>
-              <a href="https://github.com/your-username" >GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
-            
+              <strong>Fine tuning BERT to classify sentiment</strong> Built using Pytorch<var> - Natural Language Processing(LLM)</var><br>
+              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="lander.html">Documentation</a><br>
     
             
               <strong>Wave Funation Collapse </strong> Random Map generation<var> - Algorithm</var><br>
-              <a href="https://github.com/your-username" >GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
-            
-    
-            
-              <strong>A* algorithm implementation</strong> complete simulation built in PyGame<var> - Algorithm</var><br>
-              <a href="https://github.com/your-username" >GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
-            
-    
-            
-              <strong>Fine tuning BERT to classify sentiment</strong> Built using Pytorch<var> - Natural Language Processing(LLM)</var><br>
-              <a href="https://github.com/your-username">GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
-           
+              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="lander.html">Documentation</a><br>
+                     
     
             
               <strong>Neural Networks Built From Scratch in c++</strong> Mathematical Analysis of NN <var> - Neural Networks</var><br>
-              <a href="https://github.com/your-username" >GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
+              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="lander.html">Documentation</a><br>
 
-              <strong>Star Type Detection</strong> categorization <var> - Machine Learning</var><br>
-              <a href="https://github.com/your-username">GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
+              <strong>Building convolution neural network base model</strong> Mathematical Analysis of NN <var> - Neural Networks Architecture</var><br>
+              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="lander.html">Documentation</a><br>
+
+
+             
 
               <strong>Airplane booking system</strong> MySql and Python intergrated project <var> - Data Base Management System</var><br>
-              <a href="https://github.com/your-username" >GitHub</a>
-              <a href="lander.html"target = "blank" class ="btn"></a><br>
+              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="lander.html">Documentation</a><br>
 
              
             
@@ -1533,661 +1764,160 @@ _____________________________    ____________________________    _______________
     <div style="height: 60px;"></div> <!-- Spacer -->
     <section></section>
 
-    <!-- Spacer 
-     <section id="kinggit" class="container my-5" >
-    <style>
 
-    /* Add this first to prevent conflicts */
-    #kinggit * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #kinggit {
+
+    <section class ="container my-5">
+      <style>
+      .wrapper {
   display: flex;
+  gap: 10px;
+  font-family: monospace;
+}
+
+.wrapper > div {
+  text-align: center;
+}
+
+.wrapper > div + div {
+  border-inline-start: 1px solid #d6cfcf;
+  padding-inline-start: 15px;
+}
+
+.wrapper > div > p {
+  margin-top: 15px;
+  max-width: 200px;
+}
+
+.wrapper a {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
   justify-content: center;
   align-items: center;
-}
-/*
-
-*/
-
-  #kinggit .card-container {
-    font-family: 'DejaVu Sans Mono', Menlo, monospace;
-
-    
-  position: relative;
-  width: 1400px;
-  height: 300px;
-  border-radius: 1em;
-  margin: 0 2em;
-}
-
-#kinggit .card-border {
-  position: absolute;
-  inset: 0;
-  background: #0005;
-  border-radius: inherit;
-}
-
-#kinggit .card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  background: #111215;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-
-
-#kinggit .header {
-  background: #0b0d10;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  border-bottom: 1px solid #1d1f23;
-}
-
-#kinggit .top-header {
-  background: #0b0d10;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  padding: 0 12px;
-  padding-top: 10px;
-}
-
-#kinggit :where(.repo > a, .repo > span) {
-  text-decoration: none;
-  color: #bebebe;
-  font-weight: 300;
-  font-size: 14px;
-}
-
-#kinggit .repo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-} 
-
-#kinggit .repo-slash {
-  font-size: 10px;
-  pointer-events: none;
-}
-
-#kinggit .repo-name {
-  color: #fff;
-  font-weight: 400;
-}
-
-#kinggit .repo > a {
+  background-color: #c5c4c4;
+  color: #000000;
   position: relative;
 }
 
-#kinggit .repo > a::before {
-  content: "";
+.data-tooltip::before,
+.data-tooltip::after {
   position: absolute;
-  inset: -2px -4px;
-  border-radius: 6px;
-  background: hsl(0 0 100 / 7%);
+  visibility: hidden;
   opacity: 0;
-  transition: 0.3s;
+  transform: translateY(5px);
+  transition: all 0.2s ease;
 }
 
-#kinggit .repo > a:hover::before {
+.data-tooltip::before {
+  content: attr(data-tooltip-content);
+  width: fit-content;
+  font-size: small;
+  font-weight: 600;
+  background-color: inherit;
+  padding: 3px 10px;
+  border-radius: 4px;
+  bottom: calc(100% + 5px);
+}
+
+.data-tooltip::after {
+  content: "";
+  border-top: 5px solid #191919;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  bottom: calc(100% + 1px);
+}
+
+.data-tooltip:hover::before,
+.data-tooltip:hover::after {
+  visibility: visible;
   opacity: 1;
+  transform: translateY(0);
 }
 
-#kinggit .gh-icon,
-#kinggit .gh-icon svg {
-  height: 2em;
-  fill: #fff;
-}
-
-#kinggit .space {
-  flex-grow: 1;
-}
-
-#kinggit .icon {
-  cursor: pointer;
-  display: flex;
-  height: 1.5em;
-  width: 1.5em;
-  padding: 0.25em;
-  border-radius: 0.25em;
-  fill: #797d86;
-  outline: 1px solid #303236;
-  transition: 0.3s;
-  /* Add these to center contents */
-  align-items: center;
-  justify-content: center;
-}
-#kinggit .icon:hover {
-  background: hsl(0 0 100 / 7%);
-}
-
-#kinggit .icon svg {
-  width: 1em;
-  height: 1em;
-}
-
-#kinggit .btm-header {
-  display: flex;
-  flex-direction: row;
-  padding: 0px 10px;
-  gap: 8px;
-  color: #fff;
-  fill: #fff;
-}
-
-#kinggit .tab {
-  position: relative;
-  padding: 4px 4px;
-  padding-bottom: 12px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
-  font-size: 14px;
-  cursor: pointer;
-  isolation: isolate;
-}
-
-#kinggit .tab-icon {
-  width: 1em;
-  height: 1.25em;
-  fill: #797d86;
-}
-
-#kinggit .tab.active {
-  border-bottom: 2px solid #e98463;
-}
-
-#kinggit .tab::before {
-  content: "";
-  position: absolute;
-  background: #fff;
-  border-radius: 8px;
-  opacity: 0;
-  inset: 0;
-  bottom: 8px;
-  z-index: -1;
-  transition: 0.3s;
-}
-
-#kinggit .tab:hover::before {
-  opacity: 0.07;
-}
-
-#kinggit .content {
-  height: 100%;
-  overflow: hidden;
-}
-
-#kinggit .prs::-webkit-scrollbar {
-  width: 0;
-}
-
-#kinggit .prs {
-  margin: 12px;
-  height: calc(100% - 24px);
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  border: 1px solid #343539;
-  border-radius: 6px;
-  overflow: auto;
-}
-
-#kinggit .pr {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
+.span-tooltip > i {
   width: 100%;
-  outline: 1px solid #343539;
-  padding: 8px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#kinggit .checkbox {
-  position: relative;
-  width: 1em;
-  height: 1em;
-  border-radius: 2px;
-  outline: 1px solid #343539;
-  transition: 0.3s;
-}
-
-#kinggit .checkbox:hover {
-  background: hsl(0 0 100 / 5%);
-}
-
-#kinggit .checkbox:active {
-  outline-color: #2a2c2f;
-  background: hsl(0 0 100 / 0%);
-}
-
-#kinggit .card input:checked ~ .checkbox {
-  outline-color: #797d86;
-}
-
-#kinggit .card input:checked ~ .checkbox:active {
-  outline-color: #56585c;
-}
-
-#kinggit .card input:checked ~ .checkbox::before {
-  content: "";
+.span-tooltip > span {
   position: absolute;
-  pointer-events: none;
-  width: 4px;
-  height: 8px;
-  border-bottom: 2px solid;
-  border-right: 2px solid;
-  border-color: #fff;
-  transform: translate(5.5px, 2.5px) rotate(45deg);
-}
-
-#kinggit .pr-icon {
-  display: flex;
-  width: 1em;
-  height: 1em;
-  fill: #63d188;
-}
-
-#kinggit pr-text {
-  display: flex;
-  flex-direction: column;
-}
-
-#kinggit .pr-title {
-  font-size: 12px;
+  width: fit-content;
+  font-size: small;
   font-weight: 600;
-  cursor: pointer;
+  background-color: inherit;
+  padding: 3px 10px;
+  border-radius: 4px;
+  bottom: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
 }
 
-#kinggit .pr-title:hover {
-  color: #4493f8;
+.span-tooltip > span::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background-color: inherit;
+  transform: rotate(45deg);
+  top: calc(100% - 6px);
+  left: 40%;
 }
 
-#kinggit .pr-desc {
-  padding-left: 2px;
-  font-size: 10px;
-  color: #797d86;
+.span-tooltip > i:hover + span {
+  visibility: visible;
+  opacity: 1;
+  bottom: calc(100% + 6px);
 }
 
-
-
-
-
-
-#kinggit .card input {
-  display: none;
-}
-#kinggit .pr-title {
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none; /* Remove default underline */
-  color: inherit; /* Inherit text color from parent */
-  display: inline-block; /* Maintain layout like a div */
-}
-
-#kinggit .pr-title:hover {
-  color: #4493f8;
-  text-decoration: none; /* Ensure no underline appears on hover */
-}
-
-
-    </style>
-
-    
-    <svg style="position: absolute; width: 0; height: 0;">
-        <filter id="unopaq" y="-100%" height="300%" x="-100%" width="300%">
-          <feColorMatrix
-            values="1 0 0 0 0 
-                  0 1 0 0 0 
-                  0 0 1 0 0 
-                  0 0 0 5 0"
-          ></feColorMatrix>
-        </filter>
-        <filter id="unopaq2" y="-100%" height="300%" x="-100%" width="300%">
-          <feColorMatrix
-            values="1 0 0 0 0 
-                  0 1 0 0 0 
-                  0 0 1 0 0 
-                  0 0 0 10 0"
-          ></feColorMatrix>
-        </filter>
-        <filter id="unopaq3" y="-100%" height="300%" x="-100%" width="300%">
-          <feColorMatrix
-            values="1 0 0 1 0 
-                  0 1 0 1 0 
-                  0 0 1 1 0 
-                  0 0 0 2 0"
-          ></feColorMatrix>
-        </filter>
-      </svg>
-      <div class="card-container">
-        <div class="spin spin-blur"></div>
-        <div class="spin spin-intense"></div>
-        <div class="backdrop"></div>
-        <div class="card-border">
-          <div class="spin spin-inside"></div>
-        </div>
-        <div class="card">
-          <div class="header">
-            <div class="top-header">
-              <div class="icon">
-                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
-                  ></path>
-                </svg>
-              </div>
-              <a class="gh-icon" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"
-                  ></path>
-                </svg>
-              </a>
-              <div class="repo">
-                <a class="repo-owner" href="#">Adi</a>
-                <span class="repo-slash">/</span>
-                <a class="repo-name" href="#">All projects </a>
-              </div>
-              <div class="space"></div>
-              <div class="icon">
-                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                  <path
-                    d="M2.8 2.06A1.75 1.75 0 0 1 4.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395c.04.093.06.194.06.295v4.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-4.5c0-.101.02-.202.06-.295Zm1.61.44a.25.25 0 0 0-.23.152L1.887 8H4.75a.75.75 0 0 1 .6.3L6.625 10h2.75l1.275-1.7a.75.75 0 0 1 .6-.3h2.863L11.82 2.652a.25.25 0 0 0-.23-.152Zm10.09 7h-2.875l-1.275 1.7a.75.75 0 0 1-.6.3h-3.5a.75.75 0 0 1-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="pfp"></div>
-            </div>
-            <div class="btm-header">
-                
-                <div class="tab active">
-                <div class="tab-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="tab-text">Code</div>
-              </div>
-              <div class="tab">
-                <div class="tab-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path>
-                    <path
-                      d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="tab-text">Issues</div>
-              </div>
-              <div class="tab ">
-                <div class="tab-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="tab-text">Pull Requests</div>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <div class="prs">
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="pr-text">
-                    <a href="https://youtube.com" class="pr-title">Lunar Lander simulation</a>
-                  <div class="pr-desc"> DQN V-DQN R-DQN Monte carlo </div>
-                </div>
-              </div>
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="pr-text">
-                  <div class="pr-title">D-16 Building Transformer </div>
-                  <div class="pr-desc">#5038 opened 3 hours ago by </div>
-                </div>
-              </div>
-
-
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-
-                <div class="pr-text">
-                  <div class="pr-title">Sonar Binary Classification</div>
-                  <div class="pr-desc">
-                    #4969 opened 3 days ago by 
-                  </div>
-                </div>
-              </div>
-
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-
-                <div class="pr-text">
-                  <div class="pr-title">.Conways game of life</div>
-                  <div class="pr-desc">
-                    #4969 opened 3 days ago by 
-                  </div>
-                </div>
-              </div>
-
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-
-                <div class="pr-text">
-                  <div class="pr-title">Wave Funation Collapse</div>
-                  <div class="pr-desc">
-                    #4969 opened 3 days ago by 
-                  </div>
-                </div>
-              </div>
-
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-
-                <div class="pr-text">
-                  <div class="pr-title">A* algorithm implementation</div>
-                  <div class="pr-desc">
-                    #4969 opened 3 days ago by 
-                  </div>
-                </div>
-              </div>
-
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-
-                <div class="pr-text">
-                  <div class="pr-title">.Fine tuning BERT to classify sentiment </div>
-                  <div class="pr-desc">
-                    #4969 opened 3 days ago by 
-                  </div>
-                </div>
-              </div>
-
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-
-                <div class="pr-text">
-                  <div class="pr-title">Neural Networks Built From Scratch in c++ Mathematical Analysis of NN</div>
-                  <div class="pr-desc">
-                    #4969 opened 3 days ago by 
-                  </div>
-                </div>
-              </div>
-
-
-
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="pr-text">
-                  <div class="pr-title">.Poisonous Mushroom Binary Classification</div>
-                  <div class="pr-desc">#4931 opened 12 days ago by</div>
-                </div>
-              </div>
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="pr-text">
-                  <div class="pr-title">
-                    Gold Price Prediction
-                  </div>
-                  <div class="pr-desc">#4869 opened 1 month ago by </div>
-                </div>
-              </div>
-              <div class="pr">
-                <label>
-                  <input type="checkbox" />
-                  <div class="checkbox"></div>
-                </label>
-                <div class="pr-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                      d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="pr-text">
-                  <div class="pr-title">heart diesease prediction </div>
-                  <div class="pr-desc">#4206 opened 2 months ago by </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </style>
+    <div class="wrapper">
+      <div>
+        <a href="#" data-tooltip-content="Github" class="data-tooltip">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-github"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+            ></path>
+          </svg>
+        </a>
+        <p>View All Projects On Github </p>
       </div>
-      
-
-</section>
     
-    -->
-
-
+      <div>
+        <a href="#" class="span-tooltip">
+          <i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-github"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+              ></path>
+            </svg>
+          </i>
+          <span>Github</span>
+        </a>
+        <p>Algorithms Repository</p>
+      </div>
+    </div>
+    </section>
+    
 
 
 
@@ -2198,13 +1928,14 @@ _____________________________    ____________________________    _______________
 <section></section>
 
 
-<section id="repository" class="container my-5">
+<section id="repository" class="container-fluid my-5">
+
   <style>
 
       
 .console-box {
-width: 80%;
-max-width: 920px;
+width: 95%;
+max-width: 1180px;
 max-height: 400px;
 margin: 50px auto;
 padding-left: 0; 
@@ -2328,7 +2059,7 @@ color: #A6E22E;
       <li>
         <ul>
           <li>
-            <span class="monokai-white"><span class="monokai-teal"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌───┐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌───┐  &nbsp;&nbsp;&nbsp;   ┌───┐   &nbsp;&nbsp;&nbsp;  ┌────────┐ &nbsp;┌───┐   &nbsp;┌───┐  &nbsp;┌────┐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌─┐</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
+            <span class="monokai-white"><span class="monokai-teal"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌───┐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌───┐  &nbsp;&nbsp;&nbsp;   ┌───┐   &nbsp;&nbsp;&nbsp;  ┌────────┐ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌───┐  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;┌───┐  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌────┐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌─┐</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
           </li>
         </ul>
       </li>
@@ -2337,7 +2068,7 @@ color: #A6E22E;
       <li>
           <ul>
             <li>
-              <span class="monokai-white"><span class="monokai-teal">q0: ──────┤ H ├────■────────┤ H ├──■──┤ X ├─────┤    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ├──┤ X ├──┤ H ├──┤ Rx ├─────────────┤M├───</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
+              <span class="monokai-white"><span class="monokai-teal">q0: ──────────┤ H ├────■────────┤ H ├──■──┤ X ├─────┤    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ├──────────┤ X ├──────────┤ H ├──────────┤ Rx ├─────────────┤M├─────────</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
             </li>
           </ul>
         </li>
@@ -2346,7 +2077,7 @@ color: #A6E22E;
         <li>
           <ul>
             <li>
-              <span class="monokai-white"><span class="monokai-teal">   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├───┤ &nbsp;&nbsp;&nbsp;│     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   └───┘   &nbsp;&nbsp;&nbsp;  └───┘   &nbsp;&nbsp;&nbsp;  │  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    │ &nbsp;├───┤&nbsp; ├───┤&nbsp; └────┘ &nbsp;┌───┐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└╥┘</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
+              <span class="monokai-white"><span class="monokai-teal">   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├───┤ &nbsp;&nbsp;&nbsp;│     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   └───┘   &nbsp;&nbsp;&nbsp;  └───┘   &nbsp;&nbsp;&nbsp;  │  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├───┤&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├───┤&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└────┘ &nbsp;┌───┐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└╥┘</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
             </li>
           </ul>
         </li>
@@ -2355,17 +2086,7 @@ color: #A6E22E;
         <li>
           <ul>
             <li>
-              <span class="monokai-white"><span class="monokai-teal">q1: ──────┤ H ├────┼───■────────────────────────┤&nbsp;Oracle ├──┤ X ├──┤ H ├──────────┤ H ├───────╫────</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
-            </li>
-          </ul>
-        </li>
-
-
-
-        <li>
-          <ul>
-            <li>
-              <span class="monokai-white"><span class="monokai-teal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         ├───┤   &nbsp;&nbsp; │ &nbsp;  │   &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;   ┌───┐   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        │  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     │ &nbsp;├───┤ &nbsp;├───┤ &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;└───┘&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
+              <span class="monokai-white"><span class="monokai-teal">q1: ──────────┤ H ├────┼────■───────────────────────┤&nbsp;Oracle ├──────────┤ X ├──────────┤ H ├──────────────────┤ H ├───────╫──────────</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
             </li>
           </ul>
         </li>
@@ -2375,7 +2096,17 @@ color: #A6E22E;
         <li>
           <ul>
             <li>
-              <span class="monokai-white"><span class="monokai-teal">q2: ──────┤ H ├────┼───┼────────┤ Z ├───────────┤    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ├──┤ X ├──┤ H ├──────────────────────╫────</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
+              <span class="monokai-white"><span class="monokai-teal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        ├───┤   &nbsp;&nbsp; │ &nbsp;&nbsp;  │   &nbsp;  ┌───┐   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          │  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     │ &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ├───┤ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├───┤ &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───┘&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li>
+          <ul>
+            <li>
+              <span class="monokai-white"><span class="monokai-teal">q2: ──────────┤ H ├────┼────┼───┤ Z ├───────────────┤    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ├──────────┤ X ├──────────┤ H ├──────────────────────────────╫──────────</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
             </li>
           </ul>
         </li>
@@ -2385,7 +2116,7 @@ color: #A6E22E;
         <li>
           <ul>
             <li>
-              <span class="monokai-white"><span class="monokai-teal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├───┤ &nbsp;┌─┴─┐ │      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  └───┘   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        └────────┘  &nbsp;└───┘  &nbsp;└───┘   &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌───┐ ║ </span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
+              <span class="monokai-white"><span class="monokai-teal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├───┤ &nbsp;┌─┴─┐&nbsp; │      &nbsp;&nbsp;└───┘   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;         └────────┘  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;└───┘  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───┘   &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌───┐ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║ </span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
             </li>
           </ul>
         </li>
@@ -2394,7 +2125,7 @@ color: #A6E22E;
         <li>
           <ul>
             <li>
-              <span class="monokai-white"><span class="monokai-teal">q3: ──────┤ X ├──┤ X ├─■────────────────────────────────────────────────────────────────┤ X ├─╫────</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
+              <span class="monokai-white"><span class="monokai-teal">q3: ──────────┤ X ├──┤ X ├──■─────────────────────────────────────────────────────────────────────────────────┤ X ├───────╫──────────</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
             </li>
           </ul>
         </li>
@@ -2403,7 +2134,7 @@ color: #A6E22E;
         <li>
           <ul>
             <li>
-              <span class="monokai-white"><span class="monokai-teal"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───┘  &nbsp;└───┘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───┘ ║</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
+              <span class="monokai-white"><span class="monokai-teal"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───┘  &nbsp;└───┘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───┘ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
             </li>
           </ul>
         </li>
@@ -2413,7 +2144,7 @@ color: #A6E22E;
         <li>
           <ul>
             <li>
-              <span class="monokai-white"><span class="monokai-teal">C: ═══════════════════════════════════════════════════════════════════════════════════════════╩════</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
+              <span class="monokai-white"><span class="monokai-teal">C: ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╩══════════</span><span class="monokai-green"></span> <span class="monokai-red"></span> <span class="monokai-teal"></span></span>
             </li>
           </ul>
         </li>
@@ -2716,239 +2447,6 @@ color: #A6E22E;
 
 </section>
 
-<!-- Spacer 
- <section id = "topological">
-    <style>
-        .card {
-          margin: 10px;
-          width: min(300px, 100%);
-          background-color: #000000;
-          border-radius: 1rem;
-          padding: 0.5rem;
-          color: #ffffff;
-        }
-        .card__hero {
-          background-color: #ffffff;
-          border-radius: 0.5rem 0.5rem 0 0;
-          padding: 1.5rem;
-          font-size: 0.875rem;
-        }
-        .card__hero-img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-          border-radius: 8px;
-          margin: 1rem 0;
-          display: block;
-        }
-        .card__hero .card__job-title {
-          margin: 2rem 0;
-          font-size: 2rem;
-          font-weight: 600;
-          padding-right: 2rem;
-        }
-        .card__hero-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          gap: 1rem;
-          font-weight: 700;
-        }
-        .card__footer {
-          display: flex;
-          justify-content: flex-start;
-          align-items: start;
-          flex-direction: column;
-          flex-wrap: nowrap;
-          padding: 0.75rem;
-          row-gap: 1rem;
-          font-weight: 700;
-          font-size: 0.875rem;
-        }
-        @media (min-width: 340px) {
-          .card__footer {
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-          }
-        }
-        .card__job-summary {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          gap: 0.75rem;
-        }
-        .card__btn {
-          width: 100%;
-          font-weight: 400;
-          border: none;
-          display: block;
-          cursor: pointer;
-          text-align: center;
-          padding: 0.5rem 1.25rem;
-          border-radius: 1rem;
-          background-color: #141417;
-          color: #fff;
-          font-size: 1rem;
-        }
-        @media (min-width: 340px) {
-          .card__btn {
-            width: max-content;
-          }
-        }
-
-        /* Added wrapper styles to align cards in a row */
-        .card-container {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 0.01rem; /* Decrease this value to reduce spacing */
-          padding: 2rem;
-        }
-    </style>
-
-  <div class="card-container">
-    <article class="card">
-      <section class="card__hero">
-        <header class="card__hero-header">
-          <span></span>
-
-          <div class="card__icon">
-            <svg
-              height="20"
-              width="20"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
-                stroke-linejoin="round"
-                stroke-linecap="round"
-              ></path>
-            </svg>
-          </div>
-        </header>
-
-        <img class="card__hero-img" 
-             src="microchip.png" 
-             alt="Job illustration">
-
-        <p class="card__job-title"></p>
-      </section>
-
-      <footer class="card__footer">
-        <div class="card__job-summary">
-          <div class="card__job-icon"></div>
-          <div class="card__job">
-            <p class="card__job-title">
-             Microsofts Majorana Quantum computing chip<br />
-            </p>
-          </div>
-        </div>
-        <button class="card__btn">Read</button>
-      </footer>
-    </article>
-
-    <article class="card">
-      <section class="card__hero">
-        <header class="card__hero-header">
-          <span></span>
-
-          <div class="card__icon">
-            <svg
-              height="20"
-              width="20"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
-                stroke-linejoin="round"
-                stroke-linecap="round"
-              ></path>
-            </svg>
-          </div>
-        </header>
-
-      
-        <img class="card__hero-img" 
-             src="intotheunknown.png" 
-             alt="Job illustration">
-
-        <p class="card__job-title"></p>
-      </section>
-
-      <footer class="card__footer">
-        <div class="card__job-summary">
-          <div class="card__job-icon"></div>
-          <div class="card__job">
-            <p class="card__job-title">
-             Deepseek compartive analysis and golbal optimization policy <br />
-            </p>
-          </div>
-        </div>
-        <button class="card__btn">Read</button>
-      </footer>
-    </article>
-
-    <article class="card">
-      <section class="card__hero">
-        <header class="card__hero-header">
-          <span></span>
-
-          <div class="card__icon">
-            <svg
-              height="20"
-              width="20"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
-                stroke-linejoin="round"
-                stroke-linecap="round"
-              ></path>
-            </svg>
-          </div>
-        </header>
-
-    
-        <img class="card__hero-img" 
-             src="hopper.png" 
-             alt="Job illustration">
-
-        <p class="card__job-title"></p>
-      </section>
-
-      <footer class="card__footer">
-        <div class="card__job-summary">
-          <div class="card__job-icon"></div>
-          <div class="card__job">
-            <p class="card__job-title">
-             working of Nvidia Hopper 1k<br />
-            </p>
-          </div>
-        </div>
-        <button class="card__btn">Read</button>
-      </footer>
-    </article>
-  </div>
-</section>
--->
 
 
 
@@ -2956,151 +2454,10 @@ color: #A6E22E;
 
 
 
-<!--
-<section id="casestudy" class="container my-5">
-    <style>
-        
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.project-card-sm {
-/*   max-width: 600px; */
-  max-width: 500px;
-  padding: 2.5px;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.15);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  transition: transform 0.4s, box-shadow 0.4s ;
-}
 
 
 
 
-
-.project-card-sm:hover .card-border-gradient {
-  opacity: 1;
-}
-
-@keyframes animate-border-gradient {
-  0% {
-    transform: rotate(0deg);
-    transform-origin: bottom;
-  }
-  100% {
-    transform: rotate(360deg) ;
-    transform-origin: bottom;
-  }
-}
-
-
-.project-card-sm .card-container {
-  display: grid;
-  grid-template-areas: "img img text text text";
-  gap: 1rem;
-  padding: 0.75rem;
-  border-radius: 12px;
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-}
-
-.card-container img {
-  grid-area: img;
-/*   height: 100%; */
-  aspect-ratio: 1 / 1;
-  width: 100%;
-  border-radius: 8px;
-  
-  transition: transform 0.3s;
-}
-
-.card-container .wrapper {
-  grid-area: text;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.card-container .wrapper h1 {
-  font-size: 1.1rem;
-  font-weight: 800;
-  line-height: 1;
-  color: #ffffff;
-  margin-bottom: 0.75rem;
-}
-
-.card-container .wrapper button {
-  background: none;
-  border: none;
-  
-  font: inherit;
-  color: #ffffff;
-/*   background-color: red; */
-  margin-top: 1.4rem;
-  
-}
-
-.card-container .wrapper button i {
-  margin-left: .5rem;
-  transition: margin 0.3s;
-}
-
-.card-container:hover button i {margin-left: 1rem;}
-        </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <div class="project-grid">
-        
-      <div class="project-card-sm">
-        <div class="card-border-gradient"></div>
-        <div class="card-container">
-          <img src="microchip.png" alt="">
-          <div class="wrapper">
-            <h1>Microsoft’s Majorana quantum computing chip</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, dignissimos dolore.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card-sm">
-        <div class="card-border-gradient"></div>
-        <div class="card-container">
-          <img src="intotheunknown.png" alt="">
-          <div class="wrapper">
-            <h1>DeepSeek Analysis</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, dignissimos dolore.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card-sm">
-        <div class="card-border-gradient"></div>
-        <div class="card-container">
-          <img src="hopper.png" alt="">
-          <div class="wrapper">
-            <h1>Microsoft’s Majorana quantum computing chip</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, dignissimos dolore.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
--->
 
 
 
@@ -3498,8 +2855,8 @@ color: #e2dedb;
   <section></section>
   <div style="height: 30px;"></div> <!-- Spacer -->
   <section></section>
-  <a href="aditya suman resume10.pdf" class="btn" target="_blank">View Resume</a>
-  <a href="https://www.youtube.com/" target="_blank" class="btn">Visit My Blog</a>
+  <a href="gobalclassone.pdf" class="btn" target="_blank">View Resume</a>
+  <a href="five.html" target="_blank" class="btn">Visit My Blog</a>
  
   
 </section>
@@ -3541,262 +2898,6 @@ color: #e2dedb;
 
 
 
-
-<!--
-<section id="light-section" class="my-5 text-center" style="position: relative; height: 800px; overflow: hidden;">
-  <style>
-    #light-section {
-      background: #181a1b;
-      font-family: 'Raleway', sans-serif;
-    }
-
-    #light-section .light-container {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      animation: rotateRoundAni 30s infinite linear;
-    }
-
-    #light-section [class^="l"] {
-      position: absolute;
-      border-radius: 100%;
-      transform-origin: center;
-    }
-
-    #light-section .l1 {
-      width: 200px;
-      height: 200px;
-      background: #A52502;
-      filter: blur(100px);
-      transform: translate(-50%, -50%);
-    }
-
-    #light-section .l1-1 {
-      width: 40px;
-      height: 80px;
-      background: #550700;
-      filter: blur(30px);
-      transform: translate(-150px, -115px);
-    }
-
-    #light-section .l1-2 {
-      width: 40px;
-      height: 60px;
-      background: #550700;
-      filter: blur(20px);
-      transform: translate(-100px, -100px);
-    }
-
-    #light-section .l1-3 {
-      width: 80px;
-      height: 80px;
-      background: #550700;
-      filter: blur(20px);
-      transform: translate(-120px, -30px);
-      animation: toLeft 3s infinite alternate;
-    }
-
-    #light-section .l1-4 {
-      width: 80px;
-      height: 80px;
-      background: #550700;
-      filter: blur(20px);
-      transform: translate(60px, 30px);
-      animation: rotateAroundAni 5s infinite alternate;
-    }
-
-    #light-section .l2 {
-      width: 160px;
-      height: 160px;
-      background: #AE2F03;
-      filter: blur(30px);
-      transform: translate(-50%, -50%);
-    }
-
-    #light-section .l3 {
-      width: 150px;
-      height: 150px;
-      background: #FADD69;
-      filter: blur(20px);
-      transform: translate(-50%, -50%);
-    }
-
-    #light-section .l4 {
-      width: 50px;
-      height: 60px;
-      background: #480A06;
-      filter: blur(15px);
-      transform: translate(-50%, -50%);
-    }
-
-    #light-section .rotateAni {
-      animation: rotateAni 2s infinite alternate linear;
-    }
-
-    #light-section .l5 {
-      width: 30px;
-      height: 40px;
-      background: #000;
-      filter: blur(5px);
-      transform: translate(-50%, -50%) rotate(20deg);
-    }
-
-    #light-section .l5-1,
-    #light-section .l5-2,
-    #light-section .l5-3 {
-      width: 100px;
-      height: 100px;
-      background: #550700;
-      filter: blur(30px);
-    }
-
-    #light-section .l5-1 { transform: translate(-100px, -60px); }
-    #light-section .l5-2 { transform: translate(-60px, -95px); }
-    #light-section .l5-3 { transform: translate(0px, -60px); }
-
-    #light-section .l6 {
-      width: 80px;
-      height: 80px;
-      border: 15px solid #FFED9E;
-      filter: blur(10px);
-      transform: translate(-50%, -50%);
-    }
-
-    #light-section .l7 {
-      width: 90px;
-      height: 90px;
-      border: 15px solid #FDF0AB;
-      filter: blur(8px);
-      transform: translate(-50%, -50%);
-    }
-
-    #light-section .l8,
-    #light-section .l8-00,
-    #light-section .l8-01 {
-      width: 60px;
-      height: 60px;
-      background: #FFE833;
-      filter: blur(30px);
-    }
-
-    #light-section .l8 { transform: translate(-80px, -10px); }
-    #light-section .l8-00 { transform: translate(30px, -10px); }
-    #light-section .l8-01 { transform: translate(0px, 20px); }
-
-    #light-section .l8-1,
-    #light-section .l8-2,
-    #light-section .l8-3 {
-      background: #FFF;
-      filter: blur(10px);
-    }
-
-    #light-section .l8-1 {
-      width: 30px;
-      height: 50px;
-      transform: translate(-60px, -10px);
-    }
-
-    #light-section .l8-2 {
-      width: 30px;
-      height: 50px;
-      transform: translate(30px, -10px);
-    }
-
-    #light-section .l8-3 {
-      width: 50px;
-      height: 30px;
-      transform: translate(0px, 30px);
-      filter: blur(15px);
-    }
-
-    #light-section .l9 {
-      width: 30px;
-      height: 60px;
-      background: #FFE833;
-      filter: blur(18px);
-      transform: translate(-70px, -10px);
-    }
-
-    #light-section .l10,
-    #light-section .l11 {
-      width: 50px;
-      height: 70px;
-      transform: translate(-50%, -50%) rotate(20deg);
-    }
-
-    #light-section .l10 { background: #521003; filter: blur(10px); }
-    #light-section .l11 { background: #220003; filter: blur(10px); }
-
-    /* Animations */
-    @keyframes rotateAni {
-      from {
-        transform: translate(-50%, -50%) rotate(20deg);
-        width: 30px;
-        height: 40px;
-      }
-      to {
-        transform: translate(-50%, -50%) rotate(40deg);
-        width: 40px;
-        height: 50px;
-      }
-    }
-
-    @keyframes rotateRoundAni {
-      from {
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
-      to {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
-    }
-
-    @keyframes toLeft {
-      from {
-        transform: translate(-120px, -30px);
-      }
-      to {
-        transform: translate(-160px, 30px);
-      }
-    }
-
-    @keyframes rotateAroundAni {
-      from {
-        transform: translate(60px, 30px) rotate(0deg);
-      }
-      to {
-        transform: translate(60px, 30px) rotate(360deg);
-      }
-    }
-  </style>
-
-  <div class="light-container">
-    <div class="l1"></div>
-    <div class="l1-1"></div>
-    <div class="l1-2"></div>
-    <div class="l1-3"></div>
-    <div class="l1-4"></div>
-    <div class="l2"></div>
-    <div class="l3"></div>
-    <div class="l4"></div>
-    <div class="l5 rotateAni"></div>
-    <div class="l5-1"></div>
-    <div class="l5-2"></div>
-    <div class="l5-3"></div>
-    <div class="l6"></div>
-    <div class="l7"></div>
-    <div class="l8"></div>
-    <div class="l8-00"></div>
-    <div class="l8-01"></div>
-    <div class="l8-1"></div>
-    <div class="l8-2"></div>
-    <div class="l8-3"></div>
-    <div class="l9 rotateAni"></div>
-    <div class="l10 rotateAni"></div>
-    <div class="l11 rotateAni"></div>
-  </div>
-</section>
--->
 <section></section>
 <div style="height: 60px;"></div> <!-- Spacer 
 <section id="itemclass" class="container my-5">
