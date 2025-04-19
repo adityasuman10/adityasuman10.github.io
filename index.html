@@ -186,8 +186,7 @@ background: rgba(7, 2, 4, 0.77);
   padding: 120px 0;
   display: block;
 }
-/* About Section
-==============================*/
+
 #about{
     padding: 80px 0;
 
@@ -243,8 +242,7 @@ background: rgba(7, 2, 4, 0.77);
 
 }
 
-/* Contact Section
-==============================*/
+
 #contact {
     padding-top: 45px;
     padding-bottom: 0;
@@ -256,7 +254,7 @@ background: rgba(7, 2, 4, 0.77);
     border: 1px solid #26292E;
 
 }
-#contact ::-moz-selection { /* For Firefox */
+#contact ::-moz-selection { 
     color:#7F8289;
     border: 1px solid #26292E;
 
@@ -358,8 +356,7 @@ background: rgba(7, 2, 4, 0.77);
 #contact #message fieldset {
     color:#fff;
 }
-/* Portfolio Section
-==============================*/
+
 #portfolio{
     padding: 80px 0;
 }
@@ -496,9 +493,9 @@ a.fa.fa-angle-down {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 60px; /* set equal width and height */
+    width: 60px; 
     height: 60px;
-    padding: 0; /* remove padding if you're setting width/height */
+    padding: 0; 
     color: #fff;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -519,8 +516,7 @@ a.fa.fa-angle-down:hover{
     -moz-osx-font-smoothing: grayscale;
     transform: translate(0, 0);
 }
-/* Footer Section
-==============================*/
+
 
 #footer {
     color:#fff;
@@ -578,11 +574,10 @@ a.fa.fa-angle-down:hover{
 
 
 
-<!-- Menu
-================================================== -->
+
 <nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-      <!-- for better mobile display -->
+    
       <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collasped">
               <span class="sr-only">Toggle navigation</span>
@@ -593,7 +588,7 @@ a.fa.fa-angle-down:hover{
         <a class="navbar-brand" href=""></a>
       </div>
 
-      <!-- Navigation Toggling -->
+ 
       <div class="collapse navbar-collapse" id="navbar-collasped">
           <ul class="nav navbar-nav navbar-right">
               
@@ -612,16 +607,15 @@ a.fa.fa-angle-down:hover{
               <script>
               function openGmailCompose(event) {
                 event.preventDefault();
-                const yourEmail = 'aditya.suman2564@gmail.com'; // Your email
+                const yourEmail = 'aditya.suman2564@gmail.com'; 
                 const subject = 'Opportunity Inquiry';
                 const body = `body { }
              
                 `;
-              
-                // Gmail compose URL structure
+             
                 const gmailUrl = `https://mail.google.com/mail/?view=cm&to=${yourEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 
-                // Open in new tab
+           
                 window.open(gmailUrl, '_blank');
               }
               </script>
@@ -630,15 +624,15 @@ a.fa.fa-angle-down:hover{
               </li>
               
           </ul>
-      </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+      </div>
+  </div>
 </nav>
 
 <div id="home" class="text-center">
   <div class="layer">
       <div class="content">
           <h1> <strong><span></span></strong></h1>
-          <p class="lead"></p><!--add++-->
+          <p class="lead"></p>
           
           <a href="#about" class="fa fa-angle-down scroll-nav"></a>
       
@@ -652,7 +646,7 @@ a.fa.fa-angle-down:hover{
 
 
 <section></section>
-<div style="height: 60px;"></div> <!-- Spacer -->
+<div style="height: 60px;"></div> 
 <section></section>
 
 
@@ -878,16 +872,16 @@ a.fa.fa-angle-down:hover{
 
   <script>
       const numbers = [
-          [1,1,1,1,1,1,0,0,0,1,1,1,1,1,1], // 0
-          [1,0,0,0,1,1,1,1,1,1,0,0,0,0,1], // 1
-          [1,0,1,1,1,1,0,1,0,1,1,1,1,0,1], // 2
-          [1,0,1,0,1,1,0,1,0,1,1,1,1,1,1], // 3
-          [1,1,1,0,0,0,0,1,0,0,1,1,1,1,1], // 4
-          [1,1,1,0,1,1,0,1,0,1,1,0,1,1,1], // 5
-          [1,1,1,1,1,1,0,1,0,1,1,0,1,1,1], // 6
-          [1,0,0,0,0,1,0,1,1,1,1,1,0,0,0], // 7
-          [1,1,1,1,1,1,0,1,0,1,1,1,1,1,1], // 8
-          [1,1,1,0,1,1,0,1,0,1,1,1,1,1,1]  // 9
+          [1,1,1,1,1,1,0,0,0,1,1,1,1,1,1], 
+          [1,0,0,0,1,1,1,1,1,1,0,0,0,0,1], 
+          [1,0,1,1,1,1,0,1,0,1,1,1,1,0,1], 
+          [1,0,1,0,1,1,0,1,0,1,1,1,1,1,1], 
+          [1,1,1,0,0,0,0,1,0,0,1,1,1,1,1], 
+          [1,1,1,0,1,1,0,1,0,1,1,0,1,1,1], 
+          [1,1,1,1,1,1,0,1,0,1,1,0,1,1,1], 
+          [1,0,0,0,0,1,0,1,1,1,1,1,0,0,0], 
+          [1,1,1,1,1,1,0,1,0,1,1,1,1,1,1], 
+          [1,1,1,0,1,1,0,1,0,1,1,1,1,1,1]  
       ];
 
       const blocks = [];
@@ -972,8 +966,8 @@ a.fa.fa-angle-down:hover{
         <ul class="skills-list">
           <style>
   #batch .badge-primary  {
-  background-color: rgb(101,2,66) !important; /* Change to your desired color */
-  color: rgb(255, 255, 255); /* Change text color if needed */
+  background-color: rgb(101,2,66) !important; 
+  color: rgb(255, 255, 255); 
   border-radius: 5px; 
         }
 
@@ -1032,16 +1026,16 @@ a.fa.fa-angle-down:hover{
 
   <script>
 const quantumFluxColors = {
-'0': '#110E3B',  // Deep Space Blue
-  '1': '#2C0756',  // Cosmic Purple
-  '2': '#4B0082',  // Indigo
-  '3': '#800080',  // Deep Violet
-  '4': '#9400D3',  // Nebula Purple
-  '5': '#BA55D3',  // Medium Orchid
-  '6': '#9932CC',  // Amethyst
-  '7': '#8A2BE2',  // Electric Purple
-  '8': '#DA70D6',  // Pale Orchid
-  '9': '#E6E6FA'   // Lavender Mist
+'0': '#110E3B',  
+  '1': '#2C0756',  
+  '2': '#4B0082',  
+  '3': '#800080',  
+  '4': '#9400D3',  
+  '5': '#BA55D3', 
+  '6': '#9932CC',  
+  '7': '#8A2BE2', 
+  '8': '#DA70D6',  
+  '9': '#E6E6FA'  
 };
 
       const asciiArt = `
@@ -1108,7 +1102,7 @@ _____________________________    ____________________________    _______________
     
 <section id = "window" class ="container my-5">
   <style>
-      /* Original Styles - Unchanged */
+  
       .terminal-container {
           max-width: 1400px;
           margin: 2rem auto;
@@ -1171,7 +1165,7 @@ _____________________________    ____________________________    _______________
           100% { opacity: 1; }
       }
       
-      /* New Application Window Styles */
+ 
       .app-window {
           max-width: 1400px;
           margin: 2rem auto;
@@ -1219,7 +1213,7 @@ _____________________________    ____________________________    _______________
           padding-right: 60px;
       }
       
-      /* Adjust original terminal container */
+    
       .app-window .terminal-container {
           margin: 0;
           border-radius: 0 0 8px 8px;
@@ -1244,7 +1238,7 @@ _____________________________    ____________________________    _______________
 
 
   <script>
-       // Original JavaScript - Unchanged
+     
        const terminal = document.getElementById('terminal');
       let currentDirectory = '~/BigDipper';
       const commands = {
@@ -1358,13 +1352,13 @@ _____________________________    ____________________________    _______________
           "contact": () => `Email: aditya.suman2564@email.com\nGitHub: github.com/yourusername\nLinkedIn: linkedin.com/in/yourprofile`,
           "clear": () => { terminal.innerHTML = ''; return ''; },
           "code": () => {
-              window.open('https://leetcode.com/adityasuman2564h', '_blank');
+              window.open('', '_blank');
               return "Lauched Leetcode"}, 
           "git": () => {
-              window.open('https://github.com/yourusername', '_blank');
+              window.open('https://github.com/adityasuman10', '_blank');
               return "Opening GitHub profile..."}, 
           "kg": () => {
-              window.open('https://github.com/yourusername', '_blank');
+              window.open('https://www.kaggle.com/aditya10k', '_blank');
               return "Launced kaggle"}, 
           "theme": (args) => {
               const colors = {
@@ -1412,7 +1406,7 @@ _____________________________    ____________________________    _______________
   terminal.appendChild(line);
   
   const input = line.querySelector('#input');
-  input.focus({ preventScroll: true }); // ← This is the crucial change
+  input.focus({ preventScroll: true }); 
   
   input.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
@@ -1440,7 +1434,7 @@ _____________________________    ____________________________    _______________
           terminal.scrollTop = terminal.scrollHeight;
       }
       
-      // Initial setup
+
       terminal.innerHTML = `
           <div class="terminal-output">>/  <br>Type -> 'help' 
               </div>
@@ -1448,7 +1442,7 @@ _____________________________    ____________________________    _______________
       `;
       printPrompt();
       </script>
-  <!-- Optional JavaScript -->
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -1479,40 +1473,40 @@ _____________________________    ____________________________    _______________
         <ul>
             
                 <strong>Lunar Lander Simulation</strong> Implemented Deep Q-learning,Vanilla Deep Q-learning,Rainbow deep - Learning and monte carlo simulaion <var> - Reinforcement learning</var><br>
-                <a href="https://github.com/your-username"  >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="lander.html">Documentation</a><br>
+                <a href="https://github.com/adityasuman10/LunarLander-RL" target = "blank"  >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a href="lander.html" target = "blank">Documentation</a><br>
 
-                <strong>ARM-in-VHDL</strong> designing hardware for implementing a processor that can execute a subset of ARM instructions described below<var> - VHDL and Assembly Language</var><br>
-                <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="lander.html">Documentation</a><br>
+                <strong>ARM-in-VHDL</strong> designing hardware for implementing a processor that can execute a subset of ARM instructions described below<var> - VHDL</var><br>
+                <a href="https://github.com/adityasuman10/ARM-in-VDHL" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a href="">Documentation</a><br>
            
                 <strong>Self Learning LLM Agent using RLHF</strong> Building a LLM that learns from human feed-back<var> - LLM architecture and Reinforcement learning</var><br>
               <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="lander.html">Documentation</a><br>
+              <a href="">Documentation</a><br>
            
               <strong>D-16 Building Transformer </strong> Implementing transformer from scatch using PyTorch <var> - neural network architecture</var><br>
               <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="lander.html">Documentation</a><br>
+                <a href="">Documentation</a><br>
                 
               <strong>heart diesease prediction</strong> using genetic algorithm for feature selection of multiple models<var> - Machine learning / MLOps</var><br>
               <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="lander.html">Documentation</a><br>
+              <a href="">Documentation</a><br>
 
               <strong>Generative Art</strong> Make art with algorithms such as Breadth First Search, Depth First Search, Perlin Noise <var> - Algorithm</var><br>
               <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="lander.html">Documentation</a><br>
+              <a href="">Documentation</a><br>
             
               <strong>Fine tuning BERT to classify sentiment</strong> Built using Pytorch<var> - Natural Language Processing(LLM)</var><br>
               <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="lander.html">Documentation</a><br>
+              <a href="">Documentation</a><br>
     
               <strong>Neural Networks Built From Scratch in c++</strong> Mathematical Analysis of NN <var> - Neural Networks</var><br>
               <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="lander.html">Documentation</a><br>
+              <a href="">Documentation</a><br>
 
               <strong>Building convolution neural network base model</strong> Mathematical Analysis of NN <var> - Neural Networks Architecture</var><br>
               <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="lander.html">Documentation</a><br>
+              <a href="">Documentation</a><br>
 
 
              
@@ -1528,7 +1522,7 @@ _____________________________    ____________________________    _______________
     </body>
     </section>
     <section></section>
-    <div style="height: 60px;"></div> <!-- Spacer -->
+    <div style="height: 60px;"></div> 
     <section></section>
 
 
@@ -1666,7 +1660,7 @@ _____________________________    ____________________________    _______________
       </div>
     
       <div>
-        <a href="https://github.com/yourusername/yourrepo" target="_blank" class="span-tooltip">
+        <a href="https://github.com/adityasuman10/Machine-Learning-Algorithms" target="_blank" class="span-tooltip">
           <i>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1694,7 +1688,7 @@ _____________________________    ____________________________    _______________
 
 
 <section></section>
-<div style="height: 60px;"></div> <!-- Spacer -->
+<div style="height: 60px;"></div> 
 <section></section>
 
 
@@ -1768,7 +1762,7 @@ list-style: none;
 margin: 0;
 }
 
-/* Monokai color pattern */
+
 .monokai-black {
 color: #000000;
 }
@@ -1942,28 +1936,28 @@ color: #A6E22E;
   <style>
     #thenfi button,
     #thenfi .btn {
-      background-color: #181a1b; /* White background */
-      color: rgb(255, 255, 255); /* Black text */
-      border: 2px solid rgb(184, 184, 184); /* Black border */
-      border-radius: 5px; /* Rounded corners */
-      padding: 10px 20px; /* Padding for better appearance */
-      font-size: 12px; /* Font size */
-      font-weight: bold; /* Bold text */
-      cursor: pointer; /* Pointer cursor on hover */
-      text-align: center; /* Center text alignment */
+      background-color: #181a1b; 
+      color: rgb(255, 255, 255); 
+      border: 2px solid rgb(184, 184, 184); 
+      border-radius: 5px; 
+      padding: 10px 20px; 
+      font-size: 12px; 
+      font-weight: bold; 
+      cursor: pointer; 
+      text-align: center; 
     }
 
-    /* Button hover effect */
+
     #thenfi button:hover,
     #thenfi .btn:hover {
-      background-color: rgb(255, 255, 255); /* Black background on hover */
-      color: rgb(0, 0, 0); /* White text on hover */
+      background-color: rgb(255, 255, 255); 
+      color: rgb(0, 0, 0); 
     }
   </style>
 
   <h2></h2>
   <p></p>
-  <a href="https://github.com/your-username" target="_blank" class="btn">GitHub Repository</a>
+  <a href="https://github.com/adityasuman10/Quantum-Computing-Algorithms" target="_blank" class="btn">GitHub Repository</a>
   <a href="saturnearth.html" target="_blank" class="btn">Qubit visualizer</a>
 </section>
 
@@ -1979,13 +1973,13 @@ color: #A6E22E;
           padding: 2rem;
           max-width: 1200px;
           margin: 0 auto;
-          border-radius: 15px; /* Rounded edges */
-          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for better effect */
+          border-radius: 15px; 
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
       }
 
       #quantum h1 {
       column-span: all;
-      font-size: 8vw; /* Reduced from 10vw */
+      font-size: 8vw; 
       margin: 0.5rem 0 2rem 0;
       text-align: center;
       text-transform: uppercase;
@@ -1995,7 +1989,7 @@ color: #A6E22E;
 
       @media screen and (min-width: 1200px) {
       #quantum h1 {
-      font-size: 80px; /* Reduced from 130px */
+      font-size: 80px; 
       }
       }
 
@@ -2088,7 +2082,7 @@ color: #A6E22E;
 
 
 <section></section>
-<div style="height: 60px;"></div> <!-- Spacer -->
+<div style="height: 60px;"></div> 
 <section></section>
 
 
@@ -2104,11 +2098,11 @@ color: #A6E22E;
           font-size: 16px;
           letter-spacing: 1.3px;
           line-height: 1.5;
-          border: none;              /* Removes any border */
-          padding: 0;                /* Removes default padding */
-          margin: 0;                 /* Optional: removes margin */
-          box-shadow: none;          /* Ensures no shadow is applied */
-          outline: none;             /* Removes focus outline if any */
+          border: none;            
+          padding: 0;               
+          margin: 0;                 
+          box-shadow: none;        
+          outline: none;           
       }
     
       #iamsick .sycamore-visualizer-node {
@@ -2158,16 +2152,16 @@ color: #A6E22E;
                                           `;
   
                                           const numberColors = {
-  '0': '#110E3B',  // Deep Space Blue
-  '1': '#2C0756',  // Cosmic Purple
-  '2': '#4B0082',  // Indigo
-  '3': '#800080',  // Deep Violet
-  '4': '#9400D3',  // Nebula Purple
-  '5': '#BA55D3',  // Medium Orchid
-  '6': '#9932CC',  // Amethyst
-  '7': '#8A2BE2',  // Electric Purple
-  '8': '#DA70D6',  // Pale Orchid
-  '9': '#E6E6FA'   // Lavender Mist
+  '0': '#110E3B',  
+  '1': '#2C0756',  
+  '2': '#4B0082',  
+  '3': '#800080',  
+  '4': '#9400D3',  
+  '5': '#BA55D3',  
+  '6': '#9932CC', 
+  '7': '#8A2BE2', 
+  '8': '#DA70D6',  
+  '9': '#E6E6FA'  
   
   };
   
@@ -2211,7 +2205,7 @@ color: #A6E22E;
             }, animationDelay);
         }
   
-        // Initialize the quantum visualization
+    
         initSycamoreVisualizer();
     </script>
 
@@ -2233,55 +2227,14 @@ color: #A6E22E;
 
 
 <section></section>
-<div style="height: 60px;"></div> <!-- Spacer -->
+<div style="height: 60px;"></div> 
 <section></section>
 <section></section>
-<div style="height: 60px;"></div> <!-- Spacer -->
+<div style="height: 60px;"></div> 
 <section></section>
 
 
 
-<!--
-<style>
-    .minimal-profile {
-      background-color: #141617;
-      color: #f0f0f0;
-      padding: 2rem;
-    }
-    
-    .minimal-profile .profile-card {
-      background-color: #1c1e1f;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-    
-    .minimal-profile .profile-title {
-      color: #ffffff;
-      border-bottom: 2px solid #444;
-      padding-bottom: 0.5rem;
-    }
-    
-    .minimal-profile .list-item dt {
-      color: #bbbbbb;
-    }
-    
-    .minimal-profile .list-item dd {
-      color: #ffffff;
-    }
-    
-    .minimal-profile .list-item a {
-      color: #66ccff;
-      text-decoration: none;
-    }
-    
-    .minimal-profile .list-item a:hover {
-      text-decoration: underline;
-    }
-    </style>
-    
-  
--->
 
 <section class="minimal-profile">
   
@@ -2339,7 +2292,7 @@ color: #A6E22E;
         </div>
         <div class="list-item">
           <dt>Alt Email</dt>
-          <dd><a href="mailto:aditya.suman5239@gmail.com">aditya.suman5239@gmail.com</a></dd>
+          <dd><a href="mailto:aditya.suman5239@gmail.com">aditya.workspace10@gmail.com</a></dd>
         </div>
         <div class="list-item">
           <dt>Phone</dt>
@@ -2356,7 +2309,7 @@ color: #A6E22E;
 
 
 <section></section>
-<div style="height: 60px;"></div> <!-- Spacer -->
+<div style="height: 60px;"></div> 
 <section></section>
 
 <section>
@@ -2457,7 +2410,7 @@ input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
 color: #bbb5af;
 }
 
-/* on hover placeholder */
+
 
 input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
 color: #e2dedb;
@@ -2600,22 +2553,22 @@ color: #e2dedb;
     }
     #dor button,
     #dor .btn {
-      background-color: #181a1b; /* White background */
-      color: rgb(255, 255, 255); /* Black text */
-      border: 2px solid rgb(184, 184, 184); /* Black border */
-      border-radius: 5px; /* Rounded corners */
-      padding: 10px 20px; /* Padding for better appearance */
-      font-size: 12px; /* Font size */
-      font-weight: bold; /* Bold text */
-      cursor: pointer; /* Pointer cursor on hover */
-      text-align: center; /* Center text alignment */
+      background-color: #181a1b; 
+      color: rgb(255, 255, 255); 
+      border: 2px solid rgb(184, 184, 184); 
+      border-radius: 5px;
+      padding: 10px 20px; 
+      font-size: 12px;
+      font-weight: bold; 
+      cursor: pointer; 
+      text-align: center; 
     }
 
-    /* Button hover effect */
+  
     #dor button:hover,
     #dor .btn:hover {
-      background-color: rgb(255, 255, 255); /* Black background on hover */
-      color: rgb(0, 0, 0); /* White text on hover */
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0); 
     }
   </style>
 
@@ -2623,7 +2576,7 @@ color: #e2dedb;
   <h2>Download My Resume / Visit My Blog</h2>
   <p></p>
   <section></section>
-  <div style="height: 30px;"></div> <!-- Spacer -->
+  <div style="height: 30px;"></div> 
   <section></section>
   <a href="" class="btn" target="_blank">View Resume</a>
   <a href="five.html" target="_blank" class="btn">Visit My Blog</a>
@@ -2649,11 +2602,11 @@ color: #e2dedb;
 
     </style>
     <section></section>
-    <div style="height: 60px;"></div> <!-- Spacer -->
+    <div style="height: 60px;"></div>
     <section></section>
   <div class="social-links mt-4"  class="container my-5 text-center">
-    <a href="https://linkedin.com/in/aditya-senghar-suman-606277258" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/adityasuman2564h" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/aditya-suman-sengar-716934360/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/adityasuman10" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
     <a href="https://aditya.suman5239@gmail.com" target = "_blank "class="social-link"><i class="fas fa-envelope"></i></a>
     <a href="https://api.whatsapp.com/send?phone=8861150142&text=hello!" class="social-link"><i class="fab fa-whatsapp"></i></a>
     <a href="https://linkedin.com/in/aditya-senghar-suman-606277258" target="_blank" class="social-link"><i class="fab fa-docker"></i>
@@ -2669,23 +2622,16 @@ color: #e2dedb;
 
 
 <section></section>
-<div style="height: 60px;"></div> <!-- Spacer 
-<section id="itemclass" class="container my-5">
-  <div class="content-container" style="display: flex; justify-content: center; align-items: center; text-align: center;">
-    <div class="image-box">
-      <img src="Imageproxy_29.webp" alt="Quantum Computing" style="width: 75%; max-width: 400px; height: auto;">
-    </div>
-  </div>
-</section>
+<div style="height: 60px;"></div>
 
 
--->
+
+
 <section></section>
 
 
 
-<!-- Footer
-================================================== -->
+
 <section>
 <footer id="footer">
   <div class="footer-top">
@@ -2719,9 +2665,6 @@ function main() {
 
 (function () {
     'use strict';
-  /* ==============================================
-     Page Scrolling
-     =============================================== */
 
     $('a.scroll-nav').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -2736,9 +2679,7 @@ function main() {
         }
     });
 
-    /*====================================
-     Show Menu on Book
-     ======================================*/
+  
     $(window).bind('scroll', function() {
         var navHeight = $(window).height() - 100;
         if ($(window).scrollTop() > navHeight) {
@@ -2747,9 +2688,7 @@ function main() {
             $('.navbar-default').removeClass('on');
         }
     });
-    /* ==============================================
-     Scroll Spy
-     =============================================== */
+  
     $('body').scrollspy({
         target: '.navbar-default',
         offset: 80
