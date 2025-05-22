@@ -1290,14 +1290,14 @@ _____________________________    ____________________________    _______________
   <script>
      
        const terminal = document.getElementById('terminal');
-      let currentDirectory = '~/BigDipper';
+      let currentDirectory = 'under development~/BigDipper-';
       const commands = {
           "help": () => `Available commands:
 
  _______________________________________________________________________
 |[] Available commands                                            |F]|!"|
 |"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""|"|
-|- code      launch leetcode profile                                  | |
+|                                                                    | |
 |- kg        launch kaggle profile                                    | |
 |- git       Open my GitHub profile                                   | |
 |- project   All projects worked on                                   | |
@@ -1428,21 +1428,7 @@ _____________________________    ____________________________    _______________
               return `Available themes: ${Object.keys(colors).join(', ')}`;
           },
           "sudo": () => "Nice try! ",
-          "launch": (args) => {
-              const colors = {
-                  '1': window.open('https://leetcode.com/adityasuman2564h', '_blank'),
-                  '2': window.open('https://leetcode.com/adityasuman2564h', '_blank'),
-                  '3': window.open('https://leetcode.com/adityasuman2564h', '_blank'),
-                  '4': window.open('https://leetcode.com/adityasuman2564h', '_blank'),
-                  '5': window.open('https://leetcode.com/adityasuman2564h', '_blank'),
-                  '7': window.open('https://leetcode.com/adityasuman2564h', '_blank'),
-                  '8': window.open('https://leetcode.com/adityasuman2564h', '_blank'),
-                  '9': window.open('https://leetcode.com/adityasuman2564h', '_blank'),
-                  
-              };
-              
-             
-          },
+        
           
       };
       
@@ -1486,8 +1472,7 @@ _____________________________    ____________________________    _______________
       
 
       terminal.innerHTML = `
-          <div class="terminal-output">>/  <br>Type -> 'help' 
-              </div>
+          <div class="terminal-output">>/  <br>Type -> 'help'</div>
 
       `;
       printPrompt();
@@ -1551,37 +1536,35 @@ _____________________________    ____________________________    _______________
         
         <ul>
             
-                <strong>Fine Tuning LLM </strong> Reinforcement Learning Using Human Feedback - DPO  <var> - Reinforcement learning</var><br>
-                <a href="https://github.com/adityasuman10/LunarLander-RL" target = "blank"  >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="lander.html" target = "blank">Documentation</a><br>
+            <strong>Predicting Objects Motion - </strong>Algorithms Applied Such As Kalman Filter , Lucas Kanade Optical Flow , DeepSort / Yolo8n <var> - Computer Vision</var><br>
+            <a href="https://github.com/adityasuman10/Predicting-Objects-Motion" target = "blank"  >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="" target = "blank">Documentation</a><br>
            
-              <strong>Heart Diesease Prediction</strong> State of the art machine learning model , deployed and monitored using mlflow <var> - Machien learning mlops</var><br>
-              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="">Documentation</a><br>
+              <strong>Heart Diesease Prediction - </strong> State of the art machine learning model , deployed and monitored using mlflow <var> - Machien learning / mlops</var><br>
+              <a href="https://github.com/adityasuman10/Heart-Disease-Prediction" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="" target = "blank">Documentation</a><br>
            
-              <strong>Transformer implementation </strong> Implementing transformer from scatch using PyTorch <var> - neural network Architecture</var><br>
-              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="">Documentation</a><br>
+              <strong>Lunar Lander Simulation - </strong> Implemented using Deep Q-Networks , Vanilla DQN , Rainbow DQN , Monte Carle simulation  <var> - Reinforcement Learning</var><br>
+            <a href="https://github.com/adityasuman10/LunarLander-RL" target = "blank"  >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="lander.html" target = "blank">Documentation</a><br>
                 
-              <strong>Lunar Lander Simulation</strong> Implemented using Deep Q-Networks , Vanilla DQN , Rainbow DQN , Monte Carle simulation <var> - Reinforcement learning</var><br>
-              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="">Documentation</a><br>
+              <strong>Fine Tuning LLM - </strong> Reinforcement Learning Using Human Feedback - Direct Preference Optimization <var> - Large Language Model</var><br>
+              <a href="https://github.com/adityasuman10/Fine-tuning-LLMs-on-Human-Feedback-RLHF-DPO" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="" target = "blank">Documentation</a><br>
 
+              <strong>Implementation of CNN - </strong> implementation of convolution neural networks using c++ <var> - Neual Network Architecture</var><br>
+              <a href="https://github.com/adityasuman10/implementation-CNN" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="" target = "blank">Documentation</a><br>
+          
+               <strong>Sentiment Analysis - </strong> Using BERT , RoBERTa and Long Short Term Memory To Perform Sentiment Analyis  <var> - Encoder only Architecture </var><br>
+              <a href="https://github.com/adityasuman10/Finetune-BERT-Sentiment-Analysis" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              <a href="" target = "blank">Documentation</a><br>
+
+              <strong>Image Denoising with U-Net - </strong> A convolutional neural network designed to remove noise from images using an encoder-decoder architecture <var> - Convolutional Autoencoder</var><br>
+                <a href="https://github.com/adityasuman10/Image-Denoising-with-UNet" target="_blank">GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a href="" target="_blank">Documentation</a><br>
               
-            
-              <strong>Implementation of CNN</strong> implementation of convolution neural networks using c++ <var> - Neual Network Architecture</var><br>
-              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="">Documentation</a><br>
-    
-    
-               <strong>Scale Invarient Feature Transform</strong> extracts unique and stable features from images , implemented using c++ <var> - Computer Vision</var><br>
-              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="">Documentation</a><br>
 
-           
-               <strong>Fine tuning BERT to classify sentiment</strong> implemented using pytorch for sentiment analysis tasks  <var> - Encoder only Architecture </var><br>
-              <a href="https://github.com/your-username" >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
-              <a href="">Documentation</a><br>
 
              
             
@@ -1612,12 +1595,12 @@ _____________________________    ____________________________    _______________
         
         <ul>
             
-                <strong>16 bit Risc V processor</strong> implementation of risc v arch <var> - Verilog </var><br>
-                <a href="https://github.com/adityasuman10/LunarLander-RL" target = "blank"  >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <strong>16-bit RISC-V Processor - </strong> A compact 16-bit RISC-V core designed for learning and experimentation . Ideal for FPGA prototyping and embedded applications.<var> - Verilog </var><br>
+                <a href="https://github.com/adityasuman10/16-bit-RISC-Processor" target = "blank"  >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
                 <a href="lander.html" target = "blank">Documentation</a><br>
 
                 <strong>Multicycle ARM processor VDHL</strong> Implements the ARM instruction set using a control and datapath design. <var> - VDHL </var><br>
-                <a href="https://github.com/adityasuman10/LunarLander-RL" target = "blank"  >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a href="" target = "blank"  >GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>
                 <a href="lander.html" target = "blank">Documentation</a><br>
 
 
@@ -1773,7 +1756,7 @@ _____________________________    ____________________________    _______________
       </div>
     
       <div>
-        <a href="https://github.com/adityasuman10/Machine-Learning-Algorithms" target="_blank" class="span-tooltip">
+        <a href="https://github.com/adityasuman10/ML-Projects" target="_blank" class="span-tooltip">
           <i>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1790,7 +1773,7 @@ _____________________________    ____________________________    _______________
           </i>
           <span>Github</span>
         </a>
-        <p>Algorithms Repository</p>
+        <p>Machine Learning Projects Repository</p>
       </div>
     </div>
     </section>
@@ -2150,41 +2133,7 @@ color: #A6E22E;
   <article>
   <h1>QUANTUM COMPUTING</h1>
   <h2>What is quantum computing?</h2>
-  <p>Quantum computing is an emergent field of cutting-edge computer science harnessing the unique qualities of quantum mechanics to solve problems beyond the ability of even the most powerful classical computers.
-
-      The field of quantum computing contains a range of disciplines, including quantum hardware and quantum algorithms. While still in development, quantum technology will soon be able to solve complex problems that supercomputers can’t solve, or can’t solve fast enough.</p>
-
-  <p>By taking advantage of quantum physics, fully realized quantum computers would be able to process massively complicated problems at orders of magnitude faster than modern machines. For a quantum computer, challenges that might take a classical computer thousands of years to complete might be reduced to a matter of minutes.
-      <aside>
-          <p>The study of subatomic particles, also known as quantum mechanics, reveals unique and fundamental natural principles. Quantum computers harness these fundamental phenomena to compute probabilistically and quantum mechanically.</p>
-      </aside>
-      By taking advantage of quantum physics, fully realized quantum computers would be able to process massively complicated problems at orders of magnitude faster than modern machines. For a quantum computer, challenges that might take a classical computer thousands of years to complete might be reduced to a matter of minutes. This unprecedented computational power stems from the principles of superposition and entanglement, which allow quantum bits, or qubits, to exist in multiple states simultaneously and work together in ways that classical bits cannot. As a result, quantum computers have the potential to revolutionize fields such as cryptography, artificial intelligence, materials science, and complex system simulations</p>
-
-  <p>Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.</p>
-
-  <h2>It's Really a Lot of Words</h2>
-
-  <p>Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p>
-
-  <p>Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.
-      <aside>
-          <p>Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Fusce fermentum. Nullam cursus lacinia erat.</p>
-      </aside> Praesent blandit laoreet nibh. Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Ut leo. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.</p>
-
-  <h2>Can You Make it Look Good?</h2>
-
-  <p>Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.</p>
-
-  <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis.</p>
-
-  <p>Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Fusce fermentum. Nullam cursus lacinia erat. Praesent blandit laoreet nibh. Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Ut leo. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.</p>
-
-  <p>Proin ac blandit ligula. Aenean ornare magna vitae elit laoreet, vitae luctus nulla pharetra. Integer at tellus congue, elementum sapien id, convallis nunc. Aenean sit amet enim et orci euismod vestibulum. Nulla volutpat scelerisque elit, sit amet scelerisque nisl pulvinar in. Ut molestie eros at bibendum pharetra. Sed efficitur dictum nunc, id vulputate risus vulputate a. Praesent vehicula nec est vel rhoncus. Ut vehicula, dolor nec suscipit venenatis, augue velit congue odio, sit amet tincidunt elit eros eu quam.</p>
-
-  <p>Morbi sed nulla at justo vestibulum cursus ut id urna. Etiam accumsan, velit sed feugiat vehicula, nisi tortor iaculis orci, sed bibendum elit urna vel purus. Suspendisse sagittis nisi nec elit convallis, et efficitur sapien venenatis. Curabitur auctor justo sapien, quis tristique neque cursus in. Integer fermentum metus id sapien tristique, a hendrerit lacus blandit. Fusce dictum sem risus, nec blandit ligula fermentum ac. Praesent tincidunt felis sed mi venenatis maximus.</p>
-
-  <p>Suspendisse potenti. Quisque sed ex mauris. Aenean rhoncus, tortor at interdum finibus, erat risus scelerisque nisi, non vehicula nisi libero non metus. Integer vel metus a justo viverra pharetra ut ac arcu. Nam blandit nunc justo, vitae gravida ligula luctus nec. Fusce convallis, justo a porttitor ultricies, sapien est fermentum ex, ut ornare tortor lectus ac eros. Integer facilisis risus non neque lacinia scelerisque. Mauris eu turpis eros. Donec tempor nisi a odio posuere ultricies. Nullam malesuada dui sit amet tortor varius fringilla.</p>
-  
+  <h2>The Quantum Computing Revolution</h2><p>Quantum computing represents a fundamental shift in computational capability, leveraging quantum mechanical phenomena to process information in ways impossible for classical systems. Unlike binary bits that represent 0 or 1, quantum bits (qubits) exploit superposition to exist in multiple states simultaneously. This unique property enables quantum computers to perform complex calculations exponentially faster than traditional supercomputers, particularly for optimization problems and molecular simulations. Current prototypes from IBM and Google utilize superconducting qubits cooled to near-absolute zero, while startups like IonQ employ trapped ion technology for enhanced stability.</p><aside> <p>A single 300-qubit quantum computer could theoretically represent more states than there are atoms in the observable universe - demonstrating the exponential scaling power of quantum systems.</p> </aside><p>Major tech companies and research institutions are racing to achieve quantum supremacy, the point where quantum systems outperform classical computers on specific tasks. While current quantum processors typically contain fewer than 1000 qubits, advancements in error correction and qubit stability suggest practical applications may emerge within this decade. The 2023 breakthrough in logical qubits - error-corrected qubit clusters - marked a critical step toward reliable computation. However, maintaining quantum coherence beyond milliseconds remains a fundamental challenge, with even cosmic radiation posing interference risks.</p><h2>Potential Applications and Limitations</h2><p>Promising quantum computing applications span multiple industries: pharmaceutical companies could simulate molecular interactions for drug discovery, financial institutions might optimize complex portfolios, and logistics firms could revolutionize supply chain management. Quantum cryptography promises unhackable communication through quantum key distribution, while machine learning could see dramatic acceleration through quantum neural networks. DARPA's Quantum Benchmarking Initiative recently identified 37 military applications, from radar optimization to nuclear fusion modeling.</p><aside> <p>China's Micius satellite demonstrated quantum entanglement distribution over 1,200 km in 2022, showcasing progress in quantum networking despite atmospheric interference challenges.</p> </aside><p>Despite its potential, quantum computing faces substantial hurdles. Error rates increase exponentially with qubit count, necessitating advanced error correction algorithms consuming up to 1000 physical qubits per logical qubit. The NISQ (Noisy Intermediate-Scale Quantum) era prioritizes hybrid quantum-classical approaches, combining conventional HPC with quantum accelerators. Different qubit implementations (superconducting loops, trapped ions, photonic qubits) compete for dominance, each with unique advantages and technical barriers. Photonic quantum computers show particular promise for room-temperature operation but struggle with qubit interaction control.</p><h2>The Road to Commercial Viability</h2><p>Hybrid quantum-classical systems currently bridge the gap between existing infrastructure and quantum potential. Cloud-based quantum processing units (QPUs) from AWS Braket and Azure Quantum allow researchers to experiment without physical access to fragile quantum hardware. Major milestones include developing fault-tolerant systems and creating standardized programming languages like Q# and Quipper that abstract quantum physics complexities. The 2024 launch of Europe's first quantum composter - a cryogenic facility for multi-qubit chip testing - highlights growing infrastructure investments.</p><p>As qubit counts grow, attention shifts from hardware development to practical algorithm implementation. Shor's algorithm for prime factorization threatens current encryption standards, while Grover's algorithm offers quadratic speedups for database searches. The quantum workforce pipeline expands through specialized education programs like MIT's Quantum Curriculum, though interdisciplinary expertise remains scarce. Governments worldwide have launched billion-dollar initiatives recognizing quantum computing's strategic importance, with the US National Quantum Initiative allocating $1.2 billion through 2026.</p><h2>Emerging Quantum Ecosystem</h2><p>The quantum stack now encompasses seven distinct layers: quantum materials, control hardware, qubit architectures, error correction, compiler software, algorithms, and cloud interfaces. Startups like Rigetti and Quantinuum compete with tech giants in developing full-stack solutions. Quantum-as-a-Service (QaaS) models emerge as dominant commercialization pathways, with enterprises paying up to $5,000 per hour for quantum cloud access. Investment surged to $2.35 billion globally in 2023 despite macroeconomic downturns, signaling strong market confidence.</p><aside> <p>Quantum sensors derived from computing research already enable GPS-free navigation and early-stage tumor detection, demonstrating near-term practical spinoffs.</p> </aside><p>Material science breakthroughs continue to reshape the field: topological qubits with inherent error resistance entered prototype testing in 2024, while diamond vacancy qubits show promise for scalable manufacturing. The quantum internet race intensifies with successful quantum memory experiments storing entangled photon states for over 2 seconds - a critical threshold for network viability. Standardization efforts through IEEE Quantum Initiative aim to establish universal metrics for quantum advantage verification and performance benchmarking.</p><h2>Ethical and Security Implications</h2><p>The quantum revolution brings unprecedented security challenges. Cryptographic protocols securing global finance and communications face obsolescence - NIST's post-quantum cryptography standardization project aims to future-proof encryption by 2026. Quantum blockchain concepts and quantum-secure satellites enter testing phases as nations scramble to protect critical infrastructure. Dual-use concerns grow as quantum sensors could enable stealth submarine detection or ultra-precise missile guidance systems, potentially destabilizing global security frameworks.</p><p>International collaborations like CERN's Quantum Technology Initiative work to prevent technological monopolies through open-source quantum frameworks. The 2025 Quantum Accord signed by 38 nations establishes export controls and ethical guidelines, balancing innovation with proliferation risks. As quantum computing matures, policymakers face complex decisions regarding quantum intellectual property rights, workforce migration patterns, and equitable access to quantum resources across developing nations.</p><p>Industry analysts project quantum computing will create $850 billion in annual value by 2040, though adoption curves remain steep. The technology will likely evolve as a specialized co-processor rather than classical computer replacement, integrated into HPC clusters for specific problem classes. With 72% of Fortune 500 companies now running quantum exploration teams, the race to practical quantum advantage continues accelerating across academic, governmental, and commercial spheres.</p>
 </article>
 </section>
 
